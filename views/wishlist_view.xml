@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_wish_list_partner_tree" model="ir.ui.view">
+        <field name="name">product.wishlist.tree</field>
+        <field name="model">product.wishlist</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <tree string="Wishlist">
+                <field name="name"/>
+                <field name="product_wishlist_ids"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_baby_note_forn" model="ir.ui.view">
+        <field name="name">product.wishlist.form</field>
+        <field name="model">product.wishlist</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <form string="Wishlist">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <field name="product_wishlist_ids"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_baby_note_search" model="ir.ui.view">
+        <field name="name">product.wishlist.search</field>
+        <field name="model">product.wishlist</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <search string="Wishlist">
+                <field name="name"/>
+                <field name="product_wishlist_ids"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="act_wish_list_notes_view">
+        <field name="name">Wishlist</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.wishlist</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_baby_note_search"/>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+</odoo>

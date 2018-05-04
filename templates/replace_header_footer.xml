@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <template id="shabaka_header_pleace" inherit_id="website.layout" name="Shabka Header" priority="1000">
+        <xpath expr="//div[@id='wrapwrap']/header" position="replace">
+            <header id="header">
+                <div class="container">
+                    <ul class="main-menu">
+                        <div class="item item--right">
+                            <li>
+                                <a href="/" title="الرئيسية">الرئيسية</a>
+                            </li>
+                            <li>
+                                <a href="/shop" title="المتجر">المتجر</a>
+                            </li>
+                            <li>
+                                <a href="/page/branches" title="فروعنا">فروعنا</a>
+                            </li>
+                            <li>
+                                <a href="/page/blog" title="المدونة">المدونة</a>
+                            </li>
+                        </div>
+                        <div class="item item--center">
+                            <a href="/">
+                                <img class="logo" src="/shabaka_website/static/src/img/logo.svg" alt="logo"/>
+                            </a>
+                        </div>
+                        <div class="item item--left visible-lg hidden-md hidden-sm hidden-xs">
+                            <li>
+                                <a href="/page/events" title="الفعاليات">الفعاليات</a>
+                            </li>
+                            <li>
+                                <a href="/page/about" title="عن الشبكة">عن الشبكة</a>
+                            </li>
+                            <li>
+                                <a href="/page/contact" title="اتصل بنا">اتصل بنا</a>
+                            </li>
+                            <li>
+                                <a href="/shop/cart" title="cart">
+                                    <svg class="icon  icon--cart">
+                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#cart"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="dropdown" t-if="website.user_id != user_id">
+                                <a class="avatar" href="javascript:void(0)" title="avatar">
+                                    <img t-att-src="'data:image/png;base64,'+ website.user_id.image" alt="avatar"/>
+                                </a>
+                                <ul class="dropdownMenu">
+                                    <li>
+                                        <a href="/page/profile">الملف الشخصى</a>
+                                    </li>
+                                    <li>
+                                        <a href="/my/account">إعدادات الحساب</a>
+                                    </li>
+                                    <li>
+                                        <a t-attf-href="/web/session/logout?redirect=/">الخروج</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </header>
+        </xpath>
+        <xpath expr="//div[@id='wrapwrap']/footer" position="replace">
+            <div id="footer">
+                <div class="top-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p class="u-white u-large">يمكنك الآن قراءة الكتب من خلال تطبيقنا المتوفر علي اندرويد و
+                                    آيفون
+                                </p>
+                                <div class="store">
+                                    <a href="javascript:void(0)" target="_blank" title="play">
+                                        <img src="/shabaka_website/static/src/img/play.png" alt="play"/>
+                                    </a>
+                                    <a href="javascript:void(0)" target="_blank" title="App">
+                                        <img src="/shabaka_website/static/src/img/app.png" alt="app"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="mock">
+                                    <img src="/shabaka_website/static/src/img/mock.png" alt="mock"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img class="logo" src="/shabaka_website/static/src/img/logo.svg" alt="logo"/>
+                            </div>
+                            <div class="col-md-4 col-md-offset-1">
+                                <ul>
+                                    <li>
+                                        <a href="/shop" title="المتجر">المتجر</a>
+                                    </li>
+                                    <li>
+                                        <a href="/page/branches" title="فروعنا">فروعنا</a>
+                                    </li>
+                                    <li>
+                                        <a href="/page/events" title="الفعاليات">الفعاليات</a>
+                                    </li>
+                                    <li>
+                                        <a href="/page/about" title="عن الشبكة">عن الشبكة</a>
+                                    </li>
+                                    <li>
+                                        <a href="/page/contact" title="اتصل بنا">اتصل بنا</a>
+                                    </li>
+                                    <li>
+                                        <a href="/page/terms" title="شروط النشر">شروط النشر</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul class="social u-mb2">
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <svg class="icon  icon--googleplus">
+                                                <use href="/shabaka_website/static/src/img/sprite/sprite.svg#googleplus"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <svg class="icon  icon--twitter">
+                                                <use href="/shabaka_website/static/src/img/sprite/sprite.svg#twitter"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <svg class="icon  icon--facebook">
+                                                <use href="/shabaka_website/static/src/img/sprite/sprite.svg#facebook"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <p class="u-black">جميع الحقوق محفوظة للشبكة العربية للآبحاث والنشر @2017</p>
+                                <p class="baianat">صمم بحب
+                                    <span class="heart"></span>
+                                    <a href="http://www.baianat.com/" target="_blank" title="Web design">فى بيانات
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

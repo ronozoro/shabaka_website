@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template name="الشبكة" id="website.about" page="True" priority="100">
+        <t t-call="website.layout">
+            <head>
+                <meta charset="utf-8"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+                <title>الشبكة</title>
+                <link rel="apple-touch-icon" sizes="57x57"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-57x57.png"/>
+                <link rel="apple-touch-icon" sizes="60x60"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-60x60.png"/>
+                <link rel="apple-touch-icon" sizes="72x72"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-72x72.png"/>
+                <link rel="apple-touch-icon" sizes="76x76"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-76x76.png"/>
+                <link rel="apple-touch-icon" sizes="114x114"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-114x114.png"/>
+                <link rel="apple-touch-icon" sizes="120x120"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-120x120.png"/>
+                <link rel="apple-touch-icon" sizes="144x144"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-144x144.png"/>
+                <link rel="apple-touch-icon" sizes="152x152"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-152x152.png"/>
+                <link rel="apple-touch-icon" sizes="180x180"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-180x180.png"/>
+            </head>
+            <body>
+                <div id="search">
+                    <div class="u-photo-form u-ml30">
+                        <input class="input is-main is-md" type="text"/>
+                        <input class="button" type="submit" value="بحث"/>
+                    </div>
+                    <div class="is-like is-close">
+                        <input type="submit"/>
+                        <svg class="icon  icon--close">
+                            <use href="/shabaka_website/static/src/img/sprite/sprite.svg#close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="warpper-content">
+                    <div class="head">
+                        <div class="container">
+                            <img class="wow fadeIn" src="/shabaka_website/static/src/img/book/home-1.png" alt="book"/>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2">
+                                <div class="content u-center">
+                                    <h3 class="wow fadeInUp">عن الشبكة</h3>
+                                    <p class="wow fadeInUp u-mb6">تعرف علي شبكه و تاريخها ونشأتها وأهدافها ورؤيتها
+                                        الخاصة.
+                                    </p>
+                                    <h3 class="wow fadeInUp">ما هي شبكة؟</h3>
+                                    <p class="wow fadeInUp u-mb100">شبكة هي دار نشر و لكن مختصة بالنشر الأكاديمي
+                                        النخبوي المتعلق الأكاديميين والباحثين والجمهور المثقف. تقدم ترجمات لأهم
+                                        الأطروحات الصادرة باللغات الأجنبية ، وترجمتها للغة العربية فهذا يعتبر سبق
+                                        كبير حيث يتم التنافس على الحصول على حقوق هذا الكتب بين أهم الدول العربية
+                                        الكبرى. كتب شبكة تعد من أرقى الكتب المطبوعة جودة من حيث مضمون الأفكار ومن
+                                        حيث نوعية الورق المطبوع به وفخامته وهوية الأغلفة كذلك. اسم الشبكة العربية
+                                        للأبحاث والنشر من أهم أسماء دور النشر العربية حاليا.
+                                    </p>
+                                    <h3 class="wow fadeInUp">تاريخ الشبكة</h3>
+                                    <p class="wow fadeInUp u-mb4">شركة نشأت في لبنان في عام 2007 كدار نشر فقط، تقوم
+                                        بإصدار أطروحات في مجالات فكرية ، شرعية، فلسفة سياسية، اجتماع سياسي وديني،
+                                        لكن على أرضية البحث الأكاديمي والمنهجي، لأسماء من أكبر أسماء الباحثين العرب،
+                                        والأطروحات جادة تقدم رؤى ذات صلة بواقع اليوم وتعالج إشكالاته، أو تقدم طرحا
+                                        علميا متماسكا منحنى من منحنيات العلوم. في 2011 افتتحت أول مكتبة في القاهرة
+                                        كمنفذ بيع إصداراتهم وإصدارات دور أخرى (بعضها دور توزيع حصري نحن فقط من يوزع
+                                        لها: المركز العربي للبحوث والدراسات، منتدى العلاقات العربية والدولية، دار
+                                        المشرق، جسور للترجمة والنشر) ، والبعض الآخر كبرى دور النشر العربية.
+                                    </p>
+                                    <p class="wow fadeInUp u-mb100">ثم افتتحت في 2013 فرعا آخر في الدار البيضاء ،
+                                        فروعها عبارة عن مكتبة طابقين ومقهى ثقافي أو مكان لإقامة الندوات/والمحاضرات
+                                        الثقافية، وفي عام 2016 افتتحت مكتبتها في بيروت ، ومكتبة أخرى في الإسكندرية،
+                                        وخلال شهر يوليو تفتح مكتبتها في إسطنبول، وقد تفتح مكتبة أخرى في تونس خلال
+                                        أشهر قليلة هذا العام. أصبحنا من عام 2015 نهتم بالترجمات النوعية وانتقائها
+                                        وزادت نسبتها فيما تنشره وأصبحوا منافسين أقوياء لدور النشر الأخرى بحيث أصبحنا
+                                        تقريبا الرقم الأول.
+                                    </p>
+                                    <h3 class="wow fadeInUp">الرؤية</h3>
+                                    <p class="wow fadeInUp u-mb8">الحفاظ على تميز المؤسسة وكسر الشكل النمطي
+                                        والتقليدي لرتبة المؤسسات بعد أن تكبر، والانتباه لتحدي شيخوخة المؤسسات والعمل
+                                        على تجاوزه و فتح فروع في العالم الأوربي والغربي وتبلور الجانب البحثي في
+                                        المؤسسة بشكل أوضح كمؤسسة.
+                                    </p>
+                                    <h3 class="wow fadeInUp">الهدف</h3>
+                                    <p class="wow fadeInUp u-mb8">صناعة المعرفة بشكل حقيقي وبما تعنيه الكلمة، عبر
+                                        صناعتها بتقديم أطروحات ومشاريع بحثية جادة وحقيقية لمؤلفين وباحثين هامين،
+                                        وكذلك بالقيام بترجمات هامة لأهم الإصدارات الصادرة عن دور نشر أجنبية بلغات
+                                        عديدة ، نحن نهدف إلى صناعة المعرفة وصناعة الوعي وتقديم معايير منهجية للتفكير
+                                        والحجاج السليم للمساهمة بصناعة حالة حوارية جادة على أرضية علمية ومعايير
+                                        موضوعية بدلا من التراشق لتحقيق نهضة علمية وفكرية جادة.
+                                    </p>
+                                    <h3 class="wow fadeInUp">الموزعون و دور النشر</h3>
+                                    <p class="wow fadeInUp">تعرف أكثر علي موزعينا ودور النشر والمعلومات المتعلقة
+                                        بهم.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </body>
+        </t>
+    </template>
+
+    <record id="about_page_link" model="website.menu">
+        <field name="name">about</field>
+        <field name="url">/page/about</field>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">20</field>
+    </record>
+</odoo>

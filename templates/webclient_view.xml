@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <template id="assets_frontend_inherit_more" inherit_id="website.assets_frontend">
+        <xpath expr="." position="inside">
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <meta charset="utf-8"/>
+            <script type="text/javascript">
+                var DOCUMENTATION_OPTIONS = {
+                URL_ROOT: '../../../',
+                VERSION: '0.1',
+                COLLAPSE_INDEX: false,
+                FILE_SUFFIX: '.html',
+                HAS_SOURCE: true
+                };
+                var count = 1;
+                var countEl = document.getElementById("count");
+
+                function plus() {
+                count++;
+                countEl.value = count;
+                }
+
+                function minus() {
+                if (count > 1) {
+                count--;
+                countEl.value = count;
+                }
+                }
+            </script>
+            <script src="/shabaka_website/static/src/js/owl.js" type="text/javascript"></script>
+            <script src="/shabaka_website/static/src/js/rate.js" type="text/javascript"></script>
+            <script src="/shabaka_website/static/src/js/wow.js" type="text/javascript"></script>
+            <script src="/shabaka_website/static/src/js/masonry.js" type="text/javascript"></script>
+            <script src="/shabaka_website/static/src/js/videopopup.js" type="text/javascript"></script>
+            <script src="/shabaka_website/static/src/js/tilt.js" type="text/javascript"></script>
+            <script src="/shabaka_website/static/src/js/equal.js" type="text/javascript"></script>
+            <script src="/shabaka_website/static/src/js/noProgress.js" type="text/javascript"></script>
+            <script src="/shabaka_website/static/src/js/select.js" type="text/javascript"></script>
+            <script src="/shabaka_website/static/src/js/okay.js" type="text/javascript"></script>
+            <script src="/shabaka_website/static/src/js/app.js" type="text/javascript"></script>
+            <link rel="stylesheet" type="text/css" href="/shabaka_website/static/src/css/bootstrap-rtl.css"/>
+            <link rel="stylesheet" type="text/css" href="/shabaka_website/static/src/css/owl.css"/>
+            <link rel="stylesheet" type="text/css" href="/shabaka_website/static/src/css/okay.css"/>
+            <link rel="stylesheet" type="text/css" href="/shabaka_website/static/src/css/rate.css"/>
+            <link rel="stylesheet" type="text/css" href="/shabaka_website/static/src/css/animate.css"/>
+            <link rel="stylesheet" type="text/css" href="/shabaka_website/static/src/css/style.css"/>
+        </xpath>
+    </template>
+</odoo>

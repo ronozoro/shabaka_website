@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_product_offer_tree" model="ir.ui.view">
+        <field name="name">product.offer.tree</field>
+        <field name="model">product.offer</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <tree string="Product Offers">
+                <field name="name"/>
+                <field name="valid_from"/>
+                <field name="valid_to"/>
+                <field name="product_id"/>
+                <field name="discount_value"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_product_offer_form" model="ir.ui.view">
+        <field name="name">product.offer.form</field>
+        <field name="model">product.offer</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <form string="Product Offers">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <field name="name" style="padding-right:10px" readonly="1"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </h1>
+                    </div>
+                    <group>
+                        <group col="4" colspan="4">
+                            <field name="name"/>
+                            <field name="valid_from"/>
+
+                        </group>
+                        <group>
+                            <field name="product_id"/>
+                            <field name="valid_to"/>
+                            <field name="discount_value"/>
+                        </group>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_product_offer_search" model="ir.ui.view">
+        <field name="name">product.offer.search</field>
+        <field name="model">product.offer</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <search string="Product Offers">
+                <field name="name"/>
+                <field name="valid_from"/>
+                <field name="valid_to"/>
+                <field name="product_id"/>
+                <field name="discount_value"/>
+                <newline/>
+                <group expand="0" string="Group By...">
+                    <filter string="Product" domain="[]"
+                            context="{'group_by':'product_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="act_open_product_offers">
+        <field name="name">Product Offers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.offer</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_product_offer_search"/>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem name="Product Offers"
+              action="act_open_product_offers"
+              id="menu_act_product_offers"
+              parent="sales_team.menu_sales"
+              sequence="14"/>
+</odoo>

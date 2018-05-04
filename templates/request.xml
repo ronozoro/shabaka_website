@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template name="الشبكة" id="website.request" page="True" priority="100">
+        <t t-call="website.layout">
+            <head>
+                <meta charset="utf-8"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+                <title>الشبكة</title>
+                <link rel="apple-touch-icon" sizes="57x57"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-57x57.png"/>
+                <link rel="apple-touch-icon" sizes="60x60"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-60x60.png"/>
+                <link rel="apple-touch-icon" sizes="72x72"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-72x72.png"/>
+                <link rel="apple-touch-icon" sizes="76x76"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-76x76.png"/>
+                <link rel="apple-touch-icon" sizes="114x114"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-114x114.png"/>
+                <link rel="apple-touch-icon" sizes="120x120"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-120x120.png"/>
+                <link rel="apple-touch-icon" sizes="144x144"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-144x144.png"/>
+                <link rel="apple-touch-icon" sizes="152x152"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-152x152.png"/>
+                <link rel="apple-touch-icon" sizes="180x180"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-180x180.png"/>
+            </head>
+            <body>
+
+                <div id="search">
+                    <div class="u-photo-form u-ml30">
+                        <input class="input is-main is-md" type="text"/>
+                        <input class="button" type="submit" value="بحث"/>
+                    </div>
+                    <div class="is-like is-close">
+                        <input type="submit"/>
+                        <svg class="icon  icon--close">
+                            <use href="/shabaka_website/static/src/img/sprite/sprite.svg#close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="wrapper-lg">
+                    <div class="container">
+                        <ul class="u-list-unstyled tabs--filled tabs--two u-mb9">
+                            <li>
+                                <a class="is-active" href="/page/request" marker="request.html" title="تفاصيل الطلب">
+                                    تفاصيل الطلب
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/page/checkout" marker="checkout.html" title="تفاصيل الدفع">تفاصيل الدفع</a>
+                            </li>
+                        </ul>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <form class="u-mb100">
+                                    <label>إسم المستخدم</label>
+                                    <input class="input u-mb2" type="text"/>
+                                    <label>رقم الهاتف</label>
+                                    <input class="input u-mb2" type="number"/>
+                                    <label>البلد</label>
+                                    <input class="input u-mb2" type="text"/>
+                                    <label>المدينة</label>
+                                    <input class="input u-mb2" type="text"/>
+                                    <label>العنوان</label>
+                                    <input class="input u-mb2" type="text"/>
+                                </form>
+                                <div class="clearfix">
+                                    <input class="button is-main is-md" href="javascript:void(0)" title="next"
+                                           type="submit" value="التالى"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-lg-offset-1">
+                                <table class="u-table">
+                                    <thead>
+                                        <tr>
+                                            <th>المنتج</th>
+                                            <th>الكمية</th>
+                                            <th>السعر</th>
+                                        </tr>
+                                        <tbody>
+                                            <tr>
+                                                <td>موسم صيد الغزلان</td>
+                                                <td class="u-flex-around">
+                                                    <span>25</span>
+                                                    <span>15</span>
+                                                </td>
+                                                <td>80$</td>
+                                            </tr>
+                                            <tr>
+                                                <td>مائة عام من العزلة</td>
+                                                <td class="u-flex-around">
+                                                    <span>27</span>
+                                                    <span>15.5</span>
+                                                </td>
+                                                <td>80$</td>
+                                            </tr>
+                                            <tr>
+                                                <td>تراب الماس</td>
+                                                <td class="u-flex-around">
+                                                    <span>29</span>
+                                                    <span>16</span>
+                                                </td>
+                                                <td>80$</td>
+                                            </tr>
+                                            <tr>
+                                                <td>قواعد العشق الاربعون</td>
+                                                <td class="u-flex-around">
+                                                    <span>31</span>
+                                                    <span>16.5</span>
+                                                </td>
+                                                <td>80$</td>
+                                            </tr>
+                                            <tr>
+                                                <td>أرض الإله</td>
+                                                <td class="u-flex-around">
+                                                    <span>33</span>
+                                                    <span>17</span>
+                                                </td>
+                                                <td>80$</td>
+                                            </tr>
+                                            <tr>
+                                                <td>الفيل الازرق</td>
+                                                <td class="u-flex-around">
+                                                    <span>35</span>
+                                                    <span>17.5</span>
+                                                </td>
+                                                <td>80$</td>
+                                            </tr>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>المجموع</th>
+                                                    <th class="u-flex-around">
+                                                        <span>37</span>
+                                                        <span>37</span>
+                                                    </th>
+                                                    <th>37$</th>
+                                                </tr>
+                                            </tfoot>
+                                        </tbody>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </body>
+        </t>
+    </template>
+
+    <record id="request_page_link" model="website.menu">
+        <field name="name">request</field>
+        <field name="url">/page/request</field>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">20</field>
+    </record>
+</odoo>

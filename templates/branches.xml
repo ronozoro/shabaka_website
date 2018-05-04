@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template name="الشبكة" id="our_branches" page="True" priority="100">
+        <t t-call="website.layout">
+            <head>
+                <meta charset="utf-8"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+                <title>الشبكة</title>
+                <link rel="apple-touch-icon" sizes="57x57"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-57x57.png"/>
+                <link rel="apple-touch-icon" sizes="60x60"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-60x60.png"/>
+                <link rel="apple-touch-icon" sizes="72x72"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-72x72.png"/>
+                <link rel="apple-touch-icon" sizes="76x76"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-76x76.png"/>
+                <link rel="apple-touch-icon" sizes="114x114"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-114x114.png"/>
+                <link rel="apple-touch-icon" sizes="120x120"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-120x120.png"/>
+                <link rel="apple-touch-icon" sizes="144x144"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-144x144.png"/>
+                <link rel="apple-touch-icon" sizes="152x152"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-152x152.png"/>
+                <link rel="apple-touch-icon" sizes="180x180"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-180x180.png"/>
+            </head>
+            <body>
+                <div id="search">
+                    <div class="u-photo-form u-ml30">
+                        <input class="input is-main is-md" type="text"/>
+                        <input class="button" type="submit" value="بحث"/>
+                    </div>
+                    <div class="is-like is-close">
+                        <input type="submit"/>
+                        <svg class="icon  icon--close">
+                            <use href="/shabaka_website/static/src/img/sprite/sprite.svg#close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="container">
+                        <h2 class="u-black u-large u-mb7 u-center">نتواجد اينما كنتم!</h2>
+                        <ul class="u-list-unstyled u-list-flex u-flex-center tabs u-mb9">
+                            <li>
+                                <a class="tab is-active" href="javascript:void(0)" marker="eg" title="مصر">مصر</a>
+                            </li>
+                            <li>
+                                <a class="tab" href="javascript:void(0)" marker="bu" title="بيروت">بيروت</a>
+                            </li>
+                            <li>
+                                <a class="tab" href="javascript:void(0)" marker="mo" title="المغرب">المغرب</a>
+                            </li>
+                            <li>
+                                <a class="tab" href="javascript:void(0)" marker="tu" title="تركيا">تركيا</a>
+                            </li>
+                        </ul>
+                        <div class="content u-center">
+                            <div class="map">
+                                <ul class="marker">
+                                    <li id="eg">
+                                        <svg class="icon  icon--marker">
+                                            <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker"></use>
+                                        </svg>
+                                        <div class="pulse"></div>
+                                    </li>
+                                    <li id="bu">
+                                        <svg class="icon  icon--marker">
+                                            <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker"></use>
+                                        </svg>
+                                        <div class="pulse"></div>
+                                    </li>
+                                    <li id="mo">
+                                        <svg class="icon  icon--marker">
+                                            <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker"></use>
+                                        </svg>
+                                        <div class="pulse"></div>
+                                    </li>
+                                    <li id="tu">
+                                        <svg class="icon  icon--marker">
+                                            <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker"></use>
+                                        </svg>
+                                        <div class="pulse"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-md">
+                    <div class="container">
+                        <h2 class="u-black u-large u-mb9 u-center">العروض</h2>
+                        <div class="owl-offer owl-carousel">
+                            <t t-foreach="offers" t-as="offer">
+                                <div class="item">
+                                    <article class="Card Card--offer">
+                                        <figure class="Card-header">
+                                            <a t-att-href="'/shop/product/%s' % slug(offer.product_id)">
+                                                <img t-attf-src="{{request.httprequest.url_root}}web/image/product.template/{{offer.product_id.id}}/image_medium"
+                                                     t-att-alt="offer.name"/>
+                                            </a>
+                                        </figure>
+                                        <div class="Card-discount">
+                                            <span>خصم
+                                                <span t-esc="offer.discount_value"/>
+                                                $
+                                            </span>
+                                        </div>
+                                        <div class="Card-body">
+                                            <div class="Card-price">
+                                                <p>
+                                                    <span t-esc="offer.product_id.list_price-(offer.product_id.list_price*(offer.discount_value/100))"/>
+                                                </p>
+                                                <div class="price-old">
+                                                    <p>
+                                                        <span t-esc="offer.product_id.list_price"/>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="Card-btns">
+                                            <a class="button is-main is-md u-ml0 btn btn-default btn-xs a-submit"
+                                               t-att-href="'/shop/offer/add/%s'  % slug(offer)">
+                                                أضف إلى السلة
+                                                <span class="fa fa-shopping-cart"/>
+                                            </a>
+                                            <div class="is-like">
+                                                <a t-att-href="'/shop/wishlist/add/%s'  % slug(offer.product_id)">
+                                                    <span class="fa fa-heart-o"/>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper product">
+                    <div class="container">
+                        <h2 class="u-black u-large u-mb9 u-center">الكتب والمنتجات</h2>
+                        <div class="row">
+                            <t t-foreach="products" t-as="product">
+                                <div class="col-md-3">
+                                    <form action="/shop/cart/update" method="post">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <article class="Card card--product u-center">
+                                            <figure class="Card-header equal-product">
+                                                <a t-att-href="'/shop/product/%s' % slug(product)">
+                                                    <img t-attf-src="{{request.httprequest.url_root}}web/image/product.template/{{product.id}}/image_medium"
+                                                         t-att-alt="product.name"/>
+                                                </a>
+
+                                                <div class="card-meta">
+                                                    <input name="product_id" t-att-value="product.product_variant_id.id"
+                                                           type="hidden"/>
+                                                    <a class="button is-main is-md  btn btn-default btn-xs"
+                                                       t-att-href="'/shop/cart/add/%s'  % slug(product.product_variant_id)">
+                                                        <span class="fa fa-shopping-cart"/>
+                                                    </a>
+                                                    <div>
+                                                        <a class="button is-main is-md  btn btn-default btn-xs"
+                                                           t-att-href="'/shop/wishlist/add/%s'  % slug(product)">
+                                                            <span class="fa fa-heart-o"/>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                            <div class="Card-body">
+                                                <h5 class="Card-title">
+                                                    <a class="u-black"
+                                                       t-att-href="'/shop/product/%s' % slug(product)"
+                                                       t-att-title="product.name">
+                                                        <span t-esc="product.name"/>
+                                                    </a>
+                                                </h5>
+                                                <div class="card-rating">
+                                                    <t t-call="rating.rating_star_card">
+                                                        <t t-set="rating_default_value"
+                                                           t-value="'%.2f' % (product.rating_get_stats([('website_published', '=', True)]).get('avg', 0.0),)"/>
+                                                        <t t-set="rating_disabled" t-value="True"/>
+                                                    </t>
+                                                </div>
+                                                <div class="Card-price u-black u-mb2">
+                                                    <span t-esc="product.list_price"/>
+                                                </div>
+                                                <t t-if="show_publish">
+                                                    <div id="website_published_button" class=""
+                                                         style="margin-left: 60px"
+                                                         groups="sales_team.group_sale_manager">
+                                                        <t t-call="website.publish_management">
+                                                            <t t-set="object" t-value="product"/>
+                                                            <t t-set="publish_edit" t-value="True"/>
+                                                            <t t-set="action"
+                                                               t-value="'product.product_template_action'"/>
+                                                        </t>
+                                                    </div>
+                                                </t>
+
+                                            </div>
+                                        </article>
+                                    </form>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+                <div class="content u-mb200">
+                    <div class="container">
+                        <h2 class="u-black u-large u-mb9 u-center">الأخبار</h2>
+                        <div class="row">
+                            <t t-foreach="news" t-as="new_item">
+                                <div class="col-md-4">
+                                    <article class="Card card--news">
+                                        <figure class="Card-header">
+                                            <a t-attf-href="/blog/#{ slug(new_item.blog_id) }/post/#{ slug(new_item) }">
+                                                <img t-attf-src="{{request.httprequest.url_root}}web/image/blog.post/{{new_item.id}}/image"
+                                                     t-att-alt="new_item.name"/>
+                                            </a>
+                                        </figure>
+                                        <div class="Card-body">
+                                            <h4 class="u-mb3">
+                                                <a t-attf-href="/blog/#{ slug(new_item.blog_id) }/post/#{ slug(new_item) }"><span t-esc="new_item.name"/></a>
+                                            </h4>
+                                            <div class="Card-meta">
+                                                <a t-attf-href="/blog/#{ slug(new_item.blog_id) }/post/#{ slug(new_item) }">
+                                                    <div class="date"><span t-esc="new_item.post_date"/></div>
+                                                    <svg class="icon  icon--arrow">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#arrow"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </body>
+        </t>
+    </template>
+</odoo>

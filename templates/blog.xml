@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template name="الشبكة" id="blog_posts_search" page="True" priority="100">
+        <t t-call="website.layout">
+            <head>
+                <meta charset="utf-8"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+                <title>الشبكة</title>
+                <link rel="apple-touch-icon" sizes="57x57"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-57x57.png"/>
+                <link rel="apple-touch-icon" sizes="60x60"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-60x60.png"/>
+                <link rel="apple-touch-icon" sizes="72x72"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-72x72.png"/>
+                <link rel="apple-touch-icon" sizes="76x76"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-76x76.png"/>
+                <link rel="apple-touch-icon" sizes="114x114"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-114x114.png"/>
+                <link rel="apple-touch-icon" sizes="120x120"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-120x120.png"/>
+                <link rel="apple-touch-icon" sizes="144x144"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-144x144.png"/>
+                <link rel="apple-touch-icon" sizes="152x152"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-152x152.png"/>
+                <link rel="apple-touch-icon" sizes="180x180"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-180x180.png"/>
+            </head>
+            <body>
+                <div id="search">
+                    <div class="u-photo-form u-ml30">
+                        <input class="input is-main is-md" type="text"/>
+                        <input class="button" type="submit" value="بحث"/>
+                    </div>
+                    <div class="is-like is-close">
+                        <input type="submit"/>
+                        <svg class="icon  icon--close">
+                            <use href="/shabaka_website/static/src/img/sprite/sprite.svg#close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="wrapper u-pb0">
+                    <div class="container">
+                        <div class="gridView grid">
+                            <div class="grid-sizer">
+                                <t t-foreach="news" t-as="new_item">
+                                    <div class="grid-item is-sm">
+                                        <article class="Card Card--full">
+                                            <figure class="Card-header">
+                                                <a t-attf-href="/blog/#{ slug(new_item.blog_id) }/post/#{ slug(new_item) }">
+                                                    <img t-attf-src="{{request.httprequest.url_root}}web/image/blog.post/{{new_item.id}}/image"
+                                                         t-att-alt="new_item.name"/>
+                                                </a>
+                                            </figure>
+                                            <div class="Card-body">
+                                                <h4 class="u-mb3">
+                                                    <a t-attf-href="/blog/#{ slug(new_item.blog_id) }/post/#{ slug(new_item) }">
+                                                        <span t-esc="new_item.name"/>
+                                                    </a>
+                                                </h4>
+                                                <div class="Card-meta">
+                                                    <a t-attf-href="/blog/#{ slug(new_item.blog_id) }/post/#{ slug(new_item) }">
+                                                        <div class="date">
+                                                            <span t-esc="new_item.post_date"/>
+                                                        </div>
+                                                        <svg class="icon  icon--arrow">
+                                                            <use href="/shabaka_website/static/src/img/sprite/sprite.svg#arrow"></use>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                        <!--<div class="subscribe">-->
+                        <!--<p>اضغط الاشتراك في النشرة الإخبارية</p>-->
+                        <!--<input class="input is-small is-round" type="text" placeholder="اكتب بريدك الالكتروني"/>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </body>
+        </t>
+    </template>
+</odoo>

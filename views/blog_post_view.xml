@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="blog_post_form_view_inherit">
+        <field name="name">blog.post.form</field>
+        <field name="model">blog.post</field>
+        <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//sheet/div[1]" position="after">
+                    <field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image"}'/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+</odoo>

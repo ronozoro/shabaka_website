@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template name="الشبكة" id="shabaka_website.profile" page="True" priority="100">
+        <t t-call="website.layout">
+            <head>
+                <meta charset="utf-8"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+                <title>الشبكة</title>
+                <link rel="apple-touch-icon" sizes="57x57"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-57x57.png"/>
+                <link rel="apple-touch-icon" sizes="60x60"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-60x60.png"/>
+                <link rel="apple-touch-icon" sizes="72x72"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-72x72.png"/>
+                <link rel="apple-touch-icon" sizes="76x76"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-76x76.png"/>
+                <link rel="apple-touch-icon" sizes="114x114"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-114x114.png"/>
+                <link rel="apple-touch-icon" sizes="120x120"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-120x120.png"/>
+                <link rel="apple-touch-icon" sizes="144x144"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-144x144.png"/>
+                <link rel="apple-touch-icon" sizes="152x152"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-152x152.png"/>
+                <link rel="apple-touch-icon" sizes="180x180"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-180x180.png"/>
+            </head>
+            <body>
+                <div class="wrapper-lg">
+                    <div class="container">
+                        <div class="header avatar-content">
+                            <div class="avatar-box">
+                                <div class="avatar-img">
+                                    <img t-attf-src="{{request.httprequest.url_root}}web/image/res.partner/{{partner_id.id}}/image_medium"
+                                         t-att-alt="partner_id.name"/>
+                                </div>
+                                <h2 class="u-black u-large">
+                                    <span t-esc="partner_id.name"/>
+                                </h2>
+                                <!-- <p class="date">2017 - 1999</p>-->
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h4 class="u-black u-large u-mb5">المفضلة</h4>
+                            <div class="content">
+                                <t t-foreach="wishlist_ids" t-as="product">
+                                    <div class="item">
+                                        <article class="Card Card--offer Card--offer-two Card--offer-three">
+                                            <figure class="Card-header">
+                                                <a t-att-href="'/shop/product/%s' % slug(product)">
+                                                    <img t-attf-src="{{request.httprequest.url_root}}web/image/product.template/{{product.id}}/image_medium"
+                                                         t-att-alt="product.name"/>
+                                                </a>
+                                            </figure>
+                                            <input name="product_id" t-att-value="product.product_variant_id.id"
+                                                   type="hidden"/>
+                                            <div class="Card-body">
+                                                <h4>
+                                                    <span t-esc="product.name"/>
+                                                </h4>
+                                                <!--<p>الشبكة العربية للأبحاث والنشر</p>-->
+                                                <a class="button is-main is-md u-ml0 btn btn-default btn-xs a-submit"
+                                                   t-att-href="'/shop/cart/add/%s'  % slug(product.product_variant_id)">
+                                                    أضف إلى السلة
+                                                    <span class="fa fa-shopping-cart"/>
+                                                </a>
+                                            </div>
+                                            <div class="Card-btns">
+                                                <div class="is-like">
+                                                    <a t-att-href="'/shop/wishlist/delete/%s'  % slug(product)">
+                                                        <span class="fa fa-heart-o"/>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </body>
+        </t>
+    </template>
+</odoo>

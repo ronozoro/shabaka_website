@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template name="الشبكة" id="website.contact" page="True" priority="100">
+        <t t-call="website.layout">
+            <head>
+                <meta charset="utf-8"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+                <title>الشبكة</title>
+                <link rel="apple-touch-icon" sizes="57x57"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-57x57.png"/>
+                <link rel="apple-touch-icon" sizes="60x60"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-60x60.png"/>
+                <link rel="apple-touch-icon" sizes="72x72"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-72x72.png"/>
+                <link rel="apple-touch-icon" sizes="76x76"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-76x76.png"/>
+                <link rel="apple-touch-icon" sizes="114x114"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-114x114.png"/>
+                <link rel="apple-touch-icon" sizes="120x120"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-120x120.png"/>
+                <link rel="apple-touch-icon" sizes="144x144"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-144x144.png"/>
+                <link rel="apple-touch-icon" sizes="152x152"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-152x152.png"/>
+                <link rel="apple-touch-icon" sizes="180x180"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-180x180.png"/>
+            </head>
+            <body>
+                <div id="search">
+                    <div class="u-photo-form u-ml30">
+                        <input class="input is-main is-md" type="text"/>
+                        <input class="button" type="submit" value="بحث"/>
+                    </div>
+                    <div class="is-like is-close">
+                        <input type="submit"/>
+                        <svg class="icon  icon--close">
+                            <use href="/shabaka_website/static/src/img/sprite/sprite.svg#close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-lg-offset-4">
+                                <h1 class="u-black u-large u-mb6">إتصل بنا</h1>
+                                <form class="u-mb5">
+                                    <label>الاسم بالكامل</label>
+                                    <input class="input u-mb2" type="text"/>
+                                    <label>البريد الإلكترونى</label>
+                                    <input class="input u-mb2" type="email"/>
+                                    <label>الرسالة</label>
+                                    <textarea class="input u-mb4" name="message" cols="30" rows="10"></textarea>
+                                    <div class="clearfix">
+                                        <input class="button is-main is-md" href="javascript:void(0)" title="send"
+                                               type="submit" value="إرسال"/>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </body>
+        </t>
+    </template>
+
+    <record id="contact_page_link" model="website.menu">
+        <field name="name">contact</field>
+        <field name="url">/page/contact</field>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">20</field>
+    </record>
+</odoo>

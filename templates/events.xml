@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template name="الشبكة" id="website.events" page="True" priority="100">
+        <t t-call="website.layout">
+            <head>
+                <meta charset="utf-8"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+                <title>الشبكة</title>
+                <link rel="apple-touch-icon" sizes="57x57"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-57x57.png"/>
+                <link rel="apple-touch-icon" sizes="60x60"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-60x60.png"/>
+                <link rel="apple-touch-icon" sizes="72x72"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-72x72.png"/>
+                <link rel="apple-touch-icon" sizes="76x76"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-76x76.png"/>
+                <link rel="apple-touch-icon" sizes="114x114"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-114x114.png"/>
+                <link rel="apple-touch-icon" sizes="120x120"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-120x120.png"/>
+                <link rel="apple-touch-icon" sizes="144x144"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-144x144.png"/>
+                <link rel="apple-touch-icon" sizes="152x152"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-152x152.png"/>
+                <link rel="apple-touch-icon" sizes="180x180"
+                      href="/shabaka_website/static/src/img/favicons/apple-touch-icon-180x180.png"/>
+            </head>
+            <body>
+                <div id="search">
+                    <div class="u-photo-form u-ml30">
+                        <input class="input is-main is-md" type="text"/>
+                        <input class="button" type="submit" value="بحث"/>
+                    </div>
+                    <div class="is-like is-close">
+                        <input type="submit"/>
+                        <svg class="icon  icon--close">
+                            <use href="/shabaka_website/static/src/img/sprite/sprite.svg#close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="wrapper-lg event">
+                    <div class="container">
+                        <div class="h1 u-black u-center u-mb2">الفعاليات</div>
+                        <p class="u-black u-center u-mb4">لأننا في خدمتك دائما في اي وقت و اي مكان انتشرت الشبكه
+                            العربيه في أكثر من دول عربية.
+                        </p>
+                        <ul class="u-flex-center u-list-unstyled u-center tabs--filled u-mb150">
+                            <li>
+                                <a class="is-active" href="#PG" marker="#PG" title="معارض">معارض</a>
+                            </li>
+                            <li>
+                                <a href="#SM" marker="#SM" title="سمنارات">سمنارات</a>
+                            </li>
+                            <li>
+                                <a href="#LC" marker="#LC" title="محاضرات">محاضرات</a>
+                            </li>
+                        </ul>
+                        <div class="content is-active-content" id="PG">
+                            <article class="Card Card--long wow fadeInUp equal-long">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="Card-body">
+                                            <h4>
+                                                <a href="/page/single">ندوة نقاشية لكتاب: آل بن لادن وعالم النفط
+                                                    والمال والإرهاب
+                                                </a>
+                                            </h4>
+                                            <div class="Card-meta">
+                                                <p class="u-mb1">
+                                                    <svg class="icon  icon--calender">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#calender"></use>
+                                                    </svg>
+                                                    <span>يوم الأربعاء 22 يونيو 2016 الساعة 9 مساءًا</span>
+                                                </p>
+                                                <p class="u-mb2">
+                                                    <svg class="icon  icon--marker-o">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker-o"></use>
+                                                    </svg>
+                                                    <span>بفرع مكتبة أ في 132 شارع الميرغني - مصر الجديدة -
+                                                        القاهرة
+                                                    </span>
+                                                </p>
+                                                <p class="u-mb2">تتشرف الشبكة العربية للأبحاث والنشر بالتعاون مع
+                                                    مكتبات أ بدعوتكم إلى ندوة نقاشية لكتاب: "آل بن لادن وعالم النفط
+                                                    والمال والذهب" للمؤلف الأمريكي ستيف كول.
+                                                </p>
+                                                <p>
+                                                    <span class="bold">المحاضر :</span>
+                                                    <span>أ. وائل جمال الباحث في الاقتصاد السياسي ورئيس القسم
+                                                        الاقتصادي بجريدة الشروق
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 col-md-offset-1">
+                                        <figure class="Card-header">
+                                            <a href="javascript:void(0)">
+                                                <img class="Card-thumb"
+                                                     src="/shabaka_website/static/src/img/events/0.png"
+                                                     alt="events"/>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="Card Card--long wow fadeInUp equal-long">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="Card-body">
+                                            <h4>
+                                                <a href="/page/single">ندوة نقاشية لكتاب: آل بن لادن وعالم النفط
+                                                    والمال والإرهاب
+                                                </a>
+                                            </h4>
+                                            <div class="Card-meta">
+                                                <p class="u-mb1">
+                                                    <svg class="icon  icon--calender">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#calender"></use>
+                                                    </svg>
+                                                    <span>يوم الأربعاء 22 يونيو 2016 الساعة 9 مساءًا</span>
+                                                </p>
+                                                <p class="u-mb2">
+                                                    <svg class="icon  icon--marker-o">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker-o"></use>
+                                                    </svg>
+                                                    <span>بفرع مكتبة أ في 132 شارع الميرغني - مصر الجديدة -
+                                                        القاهرة
+                                                    </span>
+                                                </p>
+                                                <p class="u-mb2">تتشرف الشبكة العربية للأبحاث والنشر بالتعاون مع
+                                                    مكتبات أ بدعوتكم إلى ندوة نقاشية لكتاب: "آل بن لادن وعالم النفط
+                                                    والمال والذهب" للمؤلف الأمريكي ستيف كول.
+                                                </p>
+                                                <p>
+                                                    <span class="bold">المحاضر :</span>
+                                                    <span>أ. وائل جمال الباحث في الاقتصاد السياسي ورئيس القسم
+                                                        الاقتصادي بجريدة الشروق
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 col-md-offset-1">
+                                        <figure class="Card-header">
+                                            <a href="javascript:void(0)">
+                                                <img class="Card-thumb"
+                                                     src="/shabaka_website/static/src/img/events/1.png"
+                                                     alt="events"/>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="Card Card--long wow fadeInUp equal-long">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="Card-body">
+                                            <h4>
+                                                <a href="/page/single">ندوة نقاشية لكتاب: آل بن لادن وعالم النفط
+                                                    والمال والإرهاب
+                                                </a>
+                                            </h4>
+                                            <div class="Card-meta">
+                                                <p class="u-mb1">
+                                                    <svg class="icon  icon--calender">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#calender"></use>
+                                                    </svg>
+                                                    <span>يوم الأربعاء 22 يونيو 2016 الساعة 9 مساءًا</span>
+                                                </p>
+                                                <p class="u-mb2">
+                                                    <svg class="icon  icon--marker-o">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker-o"></use>
+                                                    </svg>
+                                                    <span>بفرع مكتبة أ في 132 شارع الميرغني - مصر الجديدة -
+                                                        القاهرة
+                                                    </span>
+                                                </p>
+                                                <p class="u-mb2">تتشرف الشبكة العربية للأبحاث والنشر بالتعاون مع
+                                                    مكتبات أ بدعوتكم إلى ندوة نقاشية لكتاب: "آل بن لادن وعالم النفط
+                                                    والمال والذهب" للمؤلف الأمريكي ستيف كول.
+                                                </p>
+                                                <p>
+                                                    <span class="bold">المحاضر :</span>
+                                                    <span>أ. وائل جمال الباحث في الاقتصاد السياسي ورئيس القسم
+                                                        الاقتصادي بجريدة الشروق
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 col-md-offset-1">
+                                        <figure class="Card-header">
+                                            <a href="javascript:void(0)">
+                                                <img class="Card-thumb"
+                                                     src="/shabaka_website/static/src/img/events/2.png"
+                                                     alt="events"/>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="content" id="SM">
+                            <article class="Card Card--long wow fadeInUp equal-long">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="Card-body">
+                                            <h4>
+                                                <a href="/page/single">ندوة نقاشية لكتاب: آل بن لادن وعالم النفط
+                                                    والمال والإرهاب
+                                                </a>
+                                            </h4>
+                                            <div class="Card-meta">
+                                                <p class="u-mb1">
+                                                    <svg class="icon  icon--calender">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#calender"></use>
+                                                    </svg>
+                                                    <span>يوم الأربعاء 22 يونيو 2016 الساعة 9 مساءًا</span>
+                                                </p>
+                                                <p class="u-mb2">
+                                                    <svg class="icon  icon--marker-o">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker-o"></use>
+                                                    </svg>
+                                                    <span>بفرع مكتبة أ في 132 شارع الميرغني - مصر الجديدة -
+                                                        القاهرة
+                                                    </span>
+                                                </p>
+                                                <p class="u-mb2">تتشرف الشبكة العربية للأبحاث والنشر بالتعاون مع
+                                                    مكتبات أ بدعوتكم إلى ندوة نقاشية لكتاب: "آل بن لادن وعالم النفط
+                                                    والمال والذهب" للمؤلف الأمريكي ستيف كول.
+                                                </p>
+                                                <p>
+                                                    <span class="bold">المحاضر :</span>
+                                                    <span>أ. وائل جمال الباحث في الاقتصاد السياسي ورئيس القسم
+                                                        الاقتصادي بجريدة الشروق
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 col-md-offset-1">
+                                        <figure class="Card-header">
+                                            <a href="javascript:void(0)">
+                                                <img class="Card-thumb"
+                                                     src="/shabaka_website/static/src/img/events/0.png"
+                                                     alt="events"/>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="Card Card--long wow fadeInUp equal-long">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="Card-body">
+                                            <h4>
+                                                <a href="/page/single">ندوة نقاشية لكتاب: آل بن لادن وعالم النفط
+                                                    والمال والإرهاب
+                                                </a>
+                                            </h4>
+                                            <div class="Card-meta">
+                                                <p class="u-mb1">
+                                                    <svg class="icon  icon--calender">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#calender"></use>
+                                                    </svg>
+                                                    <span>يوم الأربعاء 22 يونيو 2016 الساعة 9 مساءًا</span>
+                                                </p>
+                                                <p class="u-mb2">
+                                                    <svg class="icon  icon--marker-o">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker-o"></use>
+                                                    </svg>
+                                                    <span>بفرع مكتبة أ في 132 شارع الميرغني - مصر الجديدة -
+                                                        القاهرة
+                                                    </span>
+                                                </p>
+                                                <p class="u-mb2">تتشرف الشبكة العربية للأبحاث والنشر بالتعاون مع
+                                                    مكتبات أ بدعوتكم إلى ندوة نقاشية لكتاب: "آل بن لادن وعالم النفط
+                                                    والمال والذهب" للمؤلف الأمريكي ستيف كول.
+                                                </p>
+                                                <p>
+                                                    <span class="bold">المحاضر :</span>
+                                                    <span>أ. وائل جمال الباحث في الاقتصاد السياسي ورئيس القسم
+                                                        الاقتصادي بجريدة الشروق
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 col-md-offset-1">
+                                        <figure class="Card-header">
+                                            <a href="javascript:void(0)">
+                                                <img class="Card-thumb"
+                                                     src="/shabaka_website/static/src/img/events/1.png"
+                                                     alt="events"/>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="Card Card--long wow fadeInUp equal-long">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="Card-body">
+                                            <h4>
+                                                <a href="/page/single">ندوة نقاشية لكتاب: آل بن لادن وعالم النفط
+                                                    والمال والإرهاب
+                                                </a>
+                                            </h4>
+                                            <div class="Card-meta">
+                                                <p class="u-mb1">
+                                                    <svg class="icon  icon--calender">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#calender"></use>
+                                                    </svg>
+                                                    <span>يوم الأربعاء 22 يونيو 2016 الساعة 9 مساءًا</span>
+                                                </p>
+                                                <p class="u-mb2">
+                                                    <svg class="icon  icon--marker-o">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker-o"></use>
+                                                    </svg>
+                                                    <span>بفرع مكتبة أ في 132 شارع الميرغني - مصر الجديدة -
+                                                        القاهرة
+                                                    </span>
+                                                </p>
+                                                <p class="u-mb2">تتشرف الشبكة العربية للأبحاث والنشر بالتعاون مع
+                                                    مكتبات أ بدعوتكم إلى ندوة نقاشية لكتاب: "آل بن لادن وعالم النفط
+                                                    والمال والذهب" للمؤلف الأمريكي ستيف كول.
+                                                </p>
+                                                <p>
+                                                    <span class="bold">المحاضر :</span>
+                                                    <span>أ. وائل جمال الباحث في الاقتصاد السياسي ورئيس القسم
+                                                        الاقتصادي بجريدة الشروق
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 col-md-offset-1">
+                                        <figure class="Card-header">
+                                            <a href="javascript:void(0)">
+                                                <img class="Card-thumb"
+                                                     src="/shabaka_website/static/src/img/events/2.png"
+                                                     alt="events"/>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="content" id="LC">
+                            <article class="Card Card--long wow fadeInUp equal-long">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="Card-body">
+                                            <h4>
+                                                <a href="/page/single">ندوة نقاشية لكتاب: آل بن لادن وعالم النفط
+                                                    والمال والإرهاب
+                                                </a>
+                                            </h4>
+                                            <div class="Card-meta">
+                                                <p class="u-mb1">
+                                                    <svg class="icon  icon--calender">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#calender"></use>
+                                                    </svg>
+                                                    <span>يوم الأربعاء 22 يونيو 2016 الساعة 9 مساءًا</span>
+                                                </p>
+                                                <p class="u-mb2">
+                                                    <svg class="icon  icon--marker-o">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker-o"></use>
+                                                    </svg>
+                                                    <span>بفرع مكتبة أ في 132 شارع الميرغني - مصر الجديدة -
+                                                        القاهرة
+                                                    </span>
+                                                </p>
+                                                <p class="u-mb2">تتشرف الشبكة العربية للأبحاث والنشر بالتعاون مع
+                                                    مكتبات أ بدعوتكم إلى ندوة نقاشية لكتاب: "آل بن لادن وعالم النفط
+                                                    والمال والذهب" للمؤلف الأمريكي ستيف كول.
+                                                </p>
+                                                <p>
+                                                    <span class="bold">المحاضر :</span>
+                                                    <span>أ. وائل جمال الباحث في الاقتصاد السياسي ورئيس القسم
+                                                        الاقتصادي بجريدة الشروق
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 col-md-offset-1">
+                                        <figure class="Card-header">
+                                            <a href="javascript:void(0)">
+                                                <img class="Card-thumb"
+                                                     src="/shabaka_website/static/src/img/events/0.png"
+                                                     alt="events"/>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="Card Card--long wow fadeInUp equal-long">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="Card-body">
+                                            <h4>
+                                                <a href="/page/single">ندوة نقاشية لكتاب: آل بن لادن وعالم النفط
+                                                    والمال والإرهاب
+                                                </a>
+                                            </h4>
+                                            <div class="Card-meta">
+                                                <p class="u-mb1">
+                                                    <svg class="icon  icon--calender">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#calender"></use>
+                                                    </svg>
+                                                    <span>يوم الأربعاء 22 يونيو 2016 الساعة 9 مساءًا</span>
+                                                </p>
+                                                <p class="u-mb2">
+                                                    <svg class="icon  icon--marker-o">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker-o"></use>
+                                                    </svg>
+                                                    <span>بفرع مكتبة أ في 132 شارع الميرغني - مصر الجديدة -
+                                                        القاهرة
+                                                    </span>
+                                                </p>
+                                                <p class="u-mb2">تتشرف الشبكة العربية للأبحاث والنشر بالتعاون مع
+                                                    مكتبات أ بدعوتكم إلى ندوة نقاشية لكتاب: "آل بن لادن وعالم النفط
+                                                    والمال والذهب" للمؤلف الأمريكي ستيف كول.
+                                                </p>
+                                                <p>
+                                                    <span class="bold">المحاضر :</span>
+                                                    <span>أ. وائل جمال الباحث في الاقتصاد السياسي ورئيس القسم
+                                                        الاقتصادي بجريدة الشروق
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 col-md-offset-1">
+                                        <figure class="Card-header">
+                                            <a href="javascript:void(0)">
+                                                <img class="Card-thumb"
+                                                     src="/shabaka_website/static/src/img/events/1.png"
+                                                     alt="events"/>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="Card Card--long wow fadeInUp equal-long">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="Card-body">
+                                            <h4>
+                                                <a href="/page/single">ندوة نقاشية لكتاب: آل بن لادن وعالم النفط
+                                                    والمال والإرهاب
+                                                </a>
+                                            </h4>
+                                            <div class="Card-meta">
+                                                <p class="u-mb1">
+                                                    <svg class="icon  icon--calender">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#calender"></use>
+                                                    </svg>
+                                                    <span>يوم الأربعاء 22 يونيو 2016 الساعة 9 مساءًا</span>
+                                                </p>
+                                                <p class="u-mb2">
+                                                    <svg class="icon  icon--marker-o">
+                                                        <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker-o"></use>
+                                                    </svg>
+                                                    <span>بفرع مكتبة أ في 132 شارع الميرغني - مصر الجديدة -
+                                                        القاهرة
+                                                    </span>
+                                                </p>
+                                                <p class="u-mb2">تتشرف الشبكة العربية للأبحاث والنشر بالتعاون مع
+                                                    مكتبات أ بدعوتكم إلى ندوة نقاشية لكتاب: "آل بن لادن وعالم النفط
+                                                    والمال والذهب" للمؤلف الأمريكي ستيف كول.
+                                                </p>
+                                                <p>
+                                                    <span class="bold">المحاضر :</span>
+                                                    <span>أ. وائل جمال الباحث في الاقتصاد السياسي ورئيس القسم
+                                                        الاقتصادي بجريدة الشروق
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 col-md-offset-1">
+                                        <figure class="Card-header">
+                                            <a href="javascript:void(0)">
+                                                <img class="Card-thumb"
+                                                     src="/shabaka_website/static/src/img/events/2.png"
+                                                     alt="events"/>
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </body>
+        </t>
+    </template>
+
+    <record id="events_page_link" model="website.menu">
+        <field name="name">events</field>
+        <field name="url">/page/events</field>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">20</field>
+    </record>
+</odoo>

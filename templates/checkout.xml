@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template name="الشبكة" id="website.checkout" page="True" priority="100">
+        <t t-call="website.layout">
+            <body>
+                <div id="search">
+                    <div class="u-photo-form u-ml30">
+                        <input class="input is-main is-md" type="text"/>
+                        <input class="button" type="submit" value="بحث"/>
+                    </div>
+                    <div class="is-like is-close">
+                        <input type="submit"/>
+                        <svg class="icon  icon--close">
+                            <use href="/shabaka_website/static/src/img/sprite/sprite.svg#close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-lg-offset-4">
+                                <ul class="u-list-unstyled tabs--filled tabs--two u-mb4">
+                                    <li>
+                                        <a class="is-active" href="request.html" marker="request.html"
+                                           title="تفاصيل الطلب">تفاصيل الطلب
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="checkout.html" marker="checkout.html" title="تفاصيل الدفع">تفاصيل
+                                            الدفع
+                                        </a>
+                                    </li>
+                                </ul>
+                                <p class="u-black u-para u-mb7">لقد اخترت شراء بعض الكتب كنسخة ورقية (يمكنك الدفع
+                                    عند الاستلام) وكنسخة الكترونية (يمنكنك الدفع اونلاين)
+                                </p>
+                                <form class="u-mb5">
+                                    <label>رقم الكارت</label>
+                                    <div class="u-photo-form u-mb2">
+                                        <input class="input" type="number"/>
+                                        <img src="/shabaka_website/static/src/img/visa.png" alt=""/>
+                                    </div>
+                                    <label>تاريخ الإنتهاء</label>
+                                    <div class="u-flex-form u-mb2">
+                                        <input class="input" type="text"/>
+                                        <input class="input" type="text"/>
+                                        <input class="input" type="text"/>
+                                    </div>
+                                    <label>رمز الحماية</label>
+                                    <input class="input u-mb3" type="password"/>
+                                    <div class="clearfix">
+                                        <input class="button is-main is-md" href="javascript:void(0)" title="done"
+                                               type="submit" value="تم"/>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </body>
+        </t>
+    </template>
+
+    <record id="checkout_page_link" model="website.menu">
+        <field name="name">checkout</field>
+        <field name="url">/page/checkout</field>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">20</field>
+    </record>
+</odoo>

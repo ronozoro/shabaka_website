@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template name="Homepage" priority="1200" id="website.homepage">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <body>
+                    <div class="content bg-white">
+                        <div class="owl-home owl-carousel">
+                            <t t-foreach="featured_products" t-as="product">
+                                <div class="item">
+                                    <article class="Card Card--home">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-xs-6">
+                                                    <div class="Card-body">
+                                                        <h1 class="Card-title">
+                                                            <a class="u-black"
+                                                               t-att-href="'/shop/product/%s' % slug(product)"
+                                                               t-att-title="product.name">
+                                                                <span t-esc="product.name"/>
+                                                            </a>
+                                                        </h1>
+                                                        <div class="card-rating">
+                                                            <t t-call="rating.rating_star_card">
+                                                                <t t-set="rating_default_value"
+                                                                   t-value="'%.2f' % (product.rating_get_stats([('website_published', '=', True)]).get('avg', 0.0),)"/>
+                                                                <t t-set="rating_disabled" t-value="True"/>
+                                                            </t>
+                                                        </div>
+                                                        <div class="Card-price u-black u-mb3">
+                                                            <span t-esc="product.list_price"/>
+                                                        </div>
+                                                        <div class="Card-btns">
+                                                            <a class="button is-main is-md u-ml0 btn btn-default btn-xs a-submit"
+                                                               t-att-href="'/shop/cart/add/%s'  % slug(product.product_variant_id)">
+                                                                أضف إلى السلة
+                                                                <span class="fa fa-shopping-cart"/>
+                                                            </a>
+                                                            <div class="is-like">
+                                                                <a t-att-href="'/shop/wishlist/add/%s'  % slug(product)">
+                                                                    <span class="fa fa-heart-o"/>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 col-xs-6">
+                                                    <figure class="Card-header">
+                                                        <a t-att-href="'/shop/product/%s' % slug(product)">
+                                                            <img t-attf-src="{{request.httprequest.url_root}}web/image/product.template/{{product.id}}/image_medium"
+                                                                 t-att-alt="product.name"/>
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="wrapper bg-white">
+                        <div class="container">
+                            <h2 class="u-black u-large u-mb7 u-center">جديد الكتب</h2>
+                            <div class="owl-book owl-carousel">
+                                <t t-foreach="products" t-as="product_limit">
+                                    <div class="item">
+                                        <article class="Card u-center">
+                                            <figure class="Card-header">
+                                                <a t-att-href="'/shop/product/%s' % slug(product_limit)">
+                                                    <img class="Card-thumb"
+                                                         t-attf-src="{{request.httprequest.url_root}}web/image/product.template/{{product_limit.id}}/image"
+                                                         t-att-alt="product_limit.name"/>
+                                                </a>
+                                            </figure>
+                                            <div class="Card-body">
+                                                <h5 class="Card-title">
+                                                    <a class="u-black"
+                                                       t-att-href="'/shop/product/%s' % slug(product_limit)"
+                                                       t-att-title="product_limit.name">
+                                                    </a>
+                                                </h5>
+                                                <div class="card-rating">
+                                                    <t t-call="rating.rating_star_card">
+                                                        <t t-set="rating_default_value"
+                                                           t-value="'%.2f' % (product_limit.rating_get_stats([('website_published', '=', True)]).get('avg', 0.0),)"/>
+                                                        <t t-set="rating_disabled" t-value="True"/>
+                                                    </t>
+                                                </div>
+                                                <div class="Card-price u-black u-mb2">
+                                                    <span t-esc="product_limit.list_price"/>
+                                                </div>
+                                                <div class="Card-btns">
+                                                    <a class="button is-main is-md"
+                                                       t-att-href="'/shop/cart/add/%s'  % slug(product_limit.product_variant_id)">
+                                                        أضف إلى السلة
+                                                        <span class="fa fa-shopping-cart"/>
+                                                    </a>
+                                                    <div class="is-like">
+                                                        <a t-att-href="'/shop/wishlist/add/%s'  % slug(product_limit)">
+                                                            <span class="fa fa-heart-o"/>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper-sm bg-white">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="u-black u-large u-mb5 u-mt6">نحرص علي المشاركة الدائمة في الفعاليات،
+                                        المؤتمرات والمحاضرات
+                                    </p>
+                                    <a class="button is-main u-mb4" href="javascript:void(0)" title="more">المزيد</a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a class="popupVideo" href="javascript:void(0)" title="popup" id="OpenVideo">
+                                        <img src="/shabaka_website/static/src/img/videoPopup.png" alt=""/>
+                                        <svg class="icon  icon--play">
+                                            <use href="/shabaka_website/static/src/img/sprite/sprite.svg#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="videoBox">
+                        <div id="videContent">
+                            <video id="videOne" controls="controls">
+                                <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+                                <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"/>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="bg-white">
+                        <div class="wrapper">
+                            <div class="container">
+                                <h2 class="u-black u-large u-mb7 u-center">نتواجد اينما كنتم!</h2>
+                                <ul class="u-list-unstyled u-list-flex u-flex-center tabs u-mb9">
+                                    <li>
+                                        <a class="tab is-active" href="javascript:void(0)" marker="eg" title="مصر">مصر
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="tab" href="javascript:void(0)" marker="bu" title="بيروت">بيروت</a>
+                                    </li>
+                                    <li>
+                                        <a class="tab" href="javascript:void(0)" marker="mo" title="المغرب">المغرب</a>
+                                    </li>
+                                    <li>
+                                        <a class="tab" href="javascript:void(0)" marker="tu" title="تركيا">تركيا</a>
+                                    </li>
+                                </ul>
+                                <div class="content u-center">
+                                    <div class="map">
+                                        <ul class="marker">
+                                            <li id="eg">
+                                                <svg class="icon  icon--marker">
+                                                    <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker"></use>
+                                                </svg>
+                                                <div class="pulse"></div>
+                                            </li>
+                                            <li id="bu">
+                                                <svg class="icon  icon--marker">
+                                                    <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker"></use>
+                                                </svg>
+                                                <div class="pulse"></div>
+                                            </li>
+                                            <li id="mo">
+                                                <svg class="icon  icon--marker">
+                                                    <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker"></use>
+                                                </svg>
+                                                <div class="pulse"></div>
+                                            </li>
+                                            <li id="tu">
+                                                <svg class="icon  icon--marker">
+                                                    <use href="/shabaka_website/static/src/img/sprite/sprite.svg#marker"></use>
+                                                </svg>
+                                                <div class="pulse"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper-lg bg-white">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <p class="u-black u-large u-mb5 u-mt6">تهتم شبكة بالاطروحات الاكاديمية والرؤي
+                                        البحثية وترجمات الكتب والابحاث العالمية
+                                    </p>
+                                    <a class="button is-main" href="/shop" title="shop">المتجر</a>
+                                </div>
+                                <div class="col-lg-3">
+                                    <img class="shop-img" src="/shabaka_website/static/src/img/stock-shop.png" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </body>
+
+            </div>
+        </t>
+    </template>
+
+</odoo>
